@@ -24,19 +24,15 @@ function App() {
       <Sky />
       <Environment preset="city" environmentIntensity={0.2} resolution={16} />
 
-      <PresentationControls
-        global={true}
-        config={{ mass: 1, tension: 170, friction: 26 }}
-      >
-        <primitive
-          object={pcLogo.scene}
-          position={[0, 0, 0]}
-          intensity={0.1}
-          scale={20}
-          castShadow
-          receiveShadow
-        />
-      </PresentationControls>
+      <OrbitControls makeDefault />
+      <primitive
+        object={pcLogo.scene}
+        position={[0, 0, 0]}
+        intensity={0.1}
+        scale={20}
+        castShadow
+        receiveShadow
+      />
       <directionalLight
         castShadow
         position={[2, 2, 3]}
